@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Johnny Stomp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows-dark.css" integrity="sha256-h23kMHZF9EZB4pGSPypdDjFgPawq5Hmdr2X0jD7MCVE=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/a768f4e0c8.js"></script>
+
+<style>
+    body {
+        background-color: #333;
+        color: #ccc;
+        font-size: 15px;
+        font-family: monospace;
+        background-image: url("frontcover-JS.jpg");
+        background-position: 75% 40%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    h1 {
+        padding-top: 15px;
+    }
+    .rights {
+        font-size: 0.5rem;
+    }
+    .song {
+        border: 1px solid transparent;
+        padding: 15px;
+    }
+    .text {
+        display: none;
+        padding: 15px  0 15px 1rem;
+    }
+</style>
+</head>
+<body>
+    <script>    
+$(document).ready(function(){
+    $("audio").on("play", function() {
+        $("audio").not(this).each(function(index, audio) {
+            audio.pause();
+        });
+        $(".text").hide();
+        $(".song").css("border", "1px solid transparent");
+        $(".song").css("background-color","transparent");
+        $(this).next(".text").show();
+        $(this).parent(".song").css("border", "1px solid #ccc");
+        $(this).parent(".song").css("background-color","#333");
+    });
+});
+    </script>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Johnny Stomp</h1>
+            <h3>Songs in Alphabetical Order</h3>
+            GNU Music Licence, 2005.
+            <p class="rights">Yes, I just made that up.  I think.  If you want to use it, that's fine!  You're not allowed to make money from it, and you have to credit me prominently.</p>
+        </div>
+        <div class="main col-12">
+            <div class="song">
+                <h5>The Angry Song</h5>
+                <audio controls>
+                    <source  src="angrysong.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    About Emily.  We were 14 and dumb af.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Appleseed</h5>
+                <audio controls>
+                    <source src="appleseed.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    Great King Plato.  If you get that reference I'll literally send you a thank you card irl.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Blitz</h5>
+                <audio controls>
+                    <source src="blitz.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    Not really much to say about this one except I fuck up a lot.  Not as many times as it sounds like, but more than I'd like.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Creep</h5>
+                <audio controls>
+                    <source src="creep.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    <p>For Matt Wells.  He and I took a very slooow bus from Boulder Colorado to NYC.  He saw a pretty girl in a truck stop and decided he wanted to stay with her in Nebraska forever.</p>
+                    <p>I actually had to trick him to get him back on the bus, but he was super drunk so it was easy.  I was super drunk too so that made it harder.</p>
+                    <p>He ended up writing a nice little book of poems about it.  I wrote this silly song about it.  My song is filled with lies but the video description revealed the truth of it so everything has turned out ok.</p>
+                </div>
+            </div>
+            <div class="song">
+                <h5>Did You Even</h5>
+                <audio controls>
+                    <source src="didyoueven.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    OMG A BREAK UP SONG. SO SAD.
+                </div>
+            </div>
+            <div class="song">
+                <h5>No Name</h5>
+                <audio controls>
+                    <source src="noname.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    What did you say?
+                </div>
+            </div>
+            <div class="song">
+                <h5>Ocean</h5>
+                <audio controls>
+                    <source src="ocean.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    The first song I ever recorded on a computer.
+                </div>
+            </div>
+            <div class="song">
+                <h5>pts</h5>
+                <audio controls>
+                    <source src="pts.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                        The meaning behind the acronym PTS is the secretest of secrets.  Only the boringest stuff obtains that level of secret, because I don't want anyone to find out I have boring secrets.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Ripcurl</h5>
+                <audio controls>
+                    <source src="ripcurl.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    When I was a kid, the doctars found teeny tiny shells embedded in the skin, deep inside my ear canals.  Too much time in the ocean, apparently.
+                </div>
+            </div>
+            <div class="song">
+                <h5>The Shoes Song</h5>
+                <audio controls>
+                    <source src="shoessong.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    Sam and I wrote this in high school.  And yes, it's supposed to be a joke.  Lustig means funny, you know.  In German.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Song About Troubles</h5>
+                <audio controls>
+                    <source src="songabouttroubles.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    Might be about drugs?  More likely I just needed some kind of words.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Song for Kvn</h5>
+                <audio controls>
+                    <source src="songforkvn.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    Kevin wrote the words.  He also wrote music for them.  I'm not sure why I went ahead and wrote completely different music for it.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Song for Ophelia</h5>
+                <audio controls>
+                    <source src="songforophelia.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    This isn't some metaphor or literary reference or something, I was dating a girl named Ophelia.  Then we broke up and OH THE SADNESS.  Same girl as the other break up song.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Song for Zooey</h5>
+                <audio controls>
+                    <source src="songforzooey.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    <img src="zooey.jpg" alt="">
+                </div>
+            </div>
+            <div class="song">
+                <h5>Strip</h5>
+                <audio controls>
+                    <source src="strip.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    Some notes.  Also pedals.
+                </div>
+            </div>
+            <div class="song">
+                <h5>The Watching Trains Song</h5>
+                <audio controls>
+                    <source src="watchingtrainssong.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    Again, no metaphor here.  We used to go hang out by the railroad tracks and drink and talk.  I suppose this song could've been about any of those people, but in reality, it was Stoo Peck I was looking for at the time.
+                </div>
+            </div>
+            <div class="song">
+                <h5>Willis</h5>
+                <audio controls>
+                    <source src="willis.mp3" type="audio/mpeg">
+                </audio>
+                <div class="text">
+                    This song actually is a metaphor.  Or is it?  Actually, I don't think it is, I just changed my friends name, as a SO SUBTLE reference to Wesley Willis, who, like my friend, was frequently suffering because of schizophrenia. 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
